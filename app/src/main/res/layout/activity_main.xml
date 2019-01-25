@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.chuchujie.propertyanimationdemo.change_shape.ShapeChangeButton
+        android:id="@+id/change_shape_and_color_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:paddingTop="20dp"
+        android:text="有本事点我啊"
+        android:textColor="#fff" />
+
+    <com.chuchujie.propertyanimationdemo.progressbar.KeyframeView
+        android:id="@+id/key_frame_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <TextureView
+            android:id="@+id/textureview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.chuchujie.propertyanimationdemo.wechat_take_video.CirclePercentView
+            android:id="@+id/circle_percent_view"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            app:radius="90"
+            app:ring_color="@color/colorAccent" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.chuchujie.propertyanimationdemo.circle_image_view.BitmapShaderRoundView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.chuchujie.propertyanimationdemo.circle_image_view.ClipPathRoundView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.chuchujie.propertyanimationdemo.circle_image_view.XfermodeRoundView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:defaultImage="@drawable/avatar" />
+
+    </LinearLayout>
+
+</LinearLayout>
