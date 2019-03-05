@@ -4,6 +4,7 @@ import android.Manifest;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.SurfaceTexture;
 import android.os.Build;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 
 import com.chuchujie.propertyanimationdemo.change_shape.ShapeChangeButton;
 import com.chuchujie.propertyanimationdemo.progressbar.KeyframeView;
+import com.chuchujie.propertyanimationdemo.scroller.ScrollActivity;
 import com.chuchujie.propertyanimationdemo.wechat_take_video.CirclePercentView;
 
 public class MainActivity extends AppCompatActivity {
@@ -92,4 +94,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void scrollTestClick(View view) {
+        Intent intent = new Intent(this, ScrollActivity.class);
+        startActivity(intent);
+    }
 }
